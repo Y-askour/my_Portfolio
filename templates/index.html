@@ -1,0 +1,66 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- index.html                                         :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: yaskour <marvin@42.fr>                     +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2022/02/18 17:28:51 by yaskour           #+#    #+#            -->
+<!-- Updated: 2022/02/18 19:11:44 by yaskour          ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Profile Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section has-text-centered">
+	  <figure class="image container is-128x128 mb-4">
+		  <img class="is-rounded" src="https://static.tvtropes.org/pmwiki/pub/images/ks_4603.jpg"/>
+	  </figure>
+	  <p class="title is-2">younes askour</p>
+	  <p class="subtittle mb-3">@Younes_as</p>
+	  <a class="button is-info is-outlined is-rounded" href="{{url_for('contact')}}"> Contact</a> 
+	  <a class="button is-dark is-outlined is-rounded" href="https://github.com/Y-askour">Github</a> 
+  </section>
+  <section class="columns">
+	  <div class="column is-three-fifths is-offset-one-fifth has-background-light">
+		  <div class="columns is-gapless">
+			  <div class="column is-half">
+				  <div class="card m-3">
+					  <div class="card-content">
+						  <h1 class="title">About</h1>
+						  <p>{{profile.about}}</p>
+					  </div>
+				  </div>
+				  <div class="card m-3 has-background-link-light">
+					  <div class="card-content">
+						  <h1 class="title">Interests</h1>
+						  <p>{{profile.interests}}</p>
+					  </div>
+				  </div>
+			  </div>
+			  <div class="column is-half">
+				  <div class="card m-3 has-background-primary-light">
+					  <div class="card-content">
+						  <h1 class="title">Experience</h1>
+						  <p>{{profile.experience}}</p>
+					  </div>
+				  </div>
+				  <div class="card m-3 has-background-warning-light">
+					  <div class="card-content">
+						  <h1 class="title">Education</h1>
+						  <p>{{profile.education}}</p>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </section>
+  </body>
+</html>
